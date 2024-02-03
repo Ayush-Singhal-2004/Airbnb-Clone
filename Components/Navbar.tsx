@@ -1,7 +1,12 @@
-import  { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
-import { FontAwesome, FontAwesome6, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import  { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { FontAwesome, FontAwesome6, MaterialIcons } from '@expo/vector-icons';
+import { navOptions } from '../data';
+import { useState, useRef } from 'react'
 
 export default function Navbar(){
+
+    const navRef = useRef([]);
+    const [selected, setSelected] = useState(0);
 
     const handleSortIconPress = () => {
         console.log("sort icon clicked!!");
@@ -11,7 +16,7 @@ export default function Navbar(){
         <View style={styles.container}>
 
             <View style={styles.searchBar}>
-                <View style={[styles.navbarTop, styles.boxShadowProp]}>
+                <TouchableOpacity style={[styles.navbarTop, styles.boxShadowProp]}>
                     <View style={styles.searchIcon}>
                         <FontAwesome name="search" size={26} color="black" />
                     </View>
@@ -19,47 +24,40 @@ export default function Navbar(){
                         <Text style={styles.navSearchHeading}>Where to?</Text>
                         <Text style={styles.navSearchText} numberOfLines={1}>Anywhere · Any week · Add Guest</Text>
                     </View>
-                </View>
-                <Pressable style={styles.sortIcon} onPress={handleSortIconPress}>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.sortIcon} onPress={handleSortIconPress}>
                     <FontAwesome6 name="sliders" size={20} color="black" />
-                </Pressable>
+                </TouchableOpacity>
             </View>
 
-            <ScrollView style={styles.navScrollContainer} horizontal={true}>
-                <View style={styles.navScrollItemContainer}>
-                    <MaterialIcons name="surfing" size={28} color="black" />
-                    <Text>Surfing</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <MaterialCommunityIcons name="window-open-variant" size={28} color="grey" />
-                    <Text style={styles.navScrollItemName}>Amazing views</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <MaterialIcons name="house" size={28} color="grey" />
-                    <Text style={styles.navScrollItemName}>Tiny homes</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <MaterialIcons name="pool" size={26} color="grey" />
-                    <Text style={styles.navScrollItemName}>Amazing pools</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <MaterialCommunityIcons name="castle" size={26} color="grey" />
-                    <Text style={styles.navScrollItemName}>Castles</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <FontAwesome6 name="umbrella-beach" size={26} color="grey" />
-                    <Text style={styles.navScrollItemName}>Beach</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <MaterialCommunityIcons name="fruit-grapes-outline" size={26} color="grey" />
-                    <Text style={styles.navScrollItemName}>Vineyards</Text>
-                </View>
-                <View style={styles.navScrollItemContainer}>
-                    <FontAwesome name="snowflake-o" size={26} color="grey" />
-                    <Text style={styles.navScrollItemName}>Arctic</Text>
-                </View>
+            <ScrollView 
+            horizontal={true} 
+            style={styles.navScrollContainer} 
+            showsHorizontalScrollIndicator={false}
+            >
+            {
+                navOptions.map((item, index:number) => (
+                    <TouchableOpacity 
+                    key={index} 
+                    style={styles.navScrollItemContainer} 
+                    ref={(e) => {navRef.current[index] = e}}
+                    onPress={() => setSelected(index)}
+                    >
+                        <MaterialIcons 
+                        name={item.icon as any} 
+                        size={24} 
+                        color={index == selected ? "black" : "grey"}
+                        />
+                        <Text 
+                        style={index == selected ? styles.selectedOption : styles.notSelectedOption}
+                        >
+                            {item.name}
+                        </Text>
+                    </TouchableOpacity>
+                ))   
+            }
             </ScrollView>
-            
+
         </View>
     )
 }
@@ -107,16 +105,21 @@ const styles = StyleSheet.create({
         padding : 10,
         borderRadius : 50
     },
-    navScrollContainer : {
-        paddingBottom : 12
-    },
+    navScrollContainer : {},
     navScrollItemContainer :{
-        paddingHorizontal : 10,
+        paddingHorizontal : 12,
         alignItems : "center",
         justifyContent : "center",
         gap : 6
     },
-    navScrollItemName : {
+    selectedOption : {
+        color : "black",
+        borderBottomColor : "black",
+        borderBottomWidth : 2,
+        paddingBottom : 8
+    },
+    notSelectedOption : {
         color : "grey",
+        paddingBottom : 8
     }
 });

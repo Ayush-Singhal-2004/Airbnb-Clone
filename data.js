@@ -1,3 +1,30 @@
+let navOptions = [
+    {
+        icon : "surfing",
+        name : "Surfing"
+    },
+    {
+        icon : "curtains-closed",
+        name : "Amazing views"
+    },
+    {
+        icon : "house",
+        name : "Tiny homes"
+    },
+    {
+        icon : "pool",
+        name : "Amazing pools"
+    },
+    {
+        icon : "castle",
+        name : "Castles"
+    },
+    {
+        icon : "beach-access",
+        name : "Beach"
+    }
+];
+
 let surfing = [
     {
         images : "https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -75,4 +102,4 @@ let amazingViews = [
     }
 ]   
 
-export {surfing, amazingViews};
+export {navOptions, surfing, amazingViews};
