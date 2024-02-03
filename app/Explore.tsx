@@ -8,7 +8,7 @@ export default function Explore() {
         <View>
             <Navbar />
             <ExploreContent />
-            <FootNavbar />
+            <FootNavbar name={"explore"}/>
         </View>
     )
 }

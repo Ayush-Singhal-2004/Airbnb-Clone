@@ -1,30 +1,69 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
 import { Feather, AntDesign, FontAwesome5, Ionicons, EvilIcons } from '@expo/vector-icons';
+import { router } from "expo-router"; 
 
-export default function FootNavbar() {
+export default function FootNavbar({name}) {
 
     return (
         <View style={styles.navContainer}>
-            <View style={styles.iconContainer}>
-                <Feather name="search" size={28} color="#f21353" />
-                <Text style={styles.navSelectedIconText}>Explore</Text>
-            </View>
-            <View style={styles.iconContainer}>
-                <AntDesign name="hearto" size={26} color="#9c9c9c" />
-                <Text style={styles.navIconText}>Wishlists</Text>
-            </View>
-            <View style={styles.iconContainer}>
-                <FontAwesome5 name="airbnb" size={26} color="#9c9c9c" />
-                <Text style={styles.navIconText}>Trips</Text>
-            </View>
-            <View style={styles.iconContainer}>
-                <Ionicons name="chatbox-outline" size={26} color="#9c9c9c" />
-                <Text style={styles.navIconText}>Inbox</Text>
-            </View>
-            <View style={styles.iconContainer}>
-                <EvilIcons name="user" size={38} color="#9c9c9c" />
-                <Text style={styles.navIconText}>Profile</Text>
-            </View>
+            <TouchableOpacity 
+            onPress={() => router.replace("/")}
+            >
+                <Feather 
+                name="search" 
+                size={28} 
+                color={name == "explore" ? "#f21353" : "#9c9c9c"} 
+                />
+                <Text style={name == "explore" ? styles.navSelectedIconText : styles.navIconText}>
+                    Explore
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            style={styles.iconContainer} 
+            onPress={() => router.replace("/Wishlist")}
+            >
+                <AntDesign 
+                name="hearto" 
+                size={26} 
+                color={name == "wishlist" ? "#f21353" : "#9c9c9c"} 
+                />
+                <Text style={name == "wishlist" ? styles.navSelectedIconText : styles.navIconText}>
+                    Wishlists
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            style={styles.iconContainer}
+            onPress={() => router.replace("/Trips")}
+            >
+                <FontAwesome5 
+                name="airbnb" 
+                size={26} 
+                color={name == "trips" ? "#f21353" : "#9c9c9c"}
+                />
+                <Text style={name == "trips" ? styles.navSelectedIconText : styles.navIconText}>Trips</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            style={styles.iconContainer}
+            onPress={() => router.replace("/Inbox")}
+            >
+                <Ionicons 
+                name="chatbox-outline" 
+                size={26} 
+                color={name == "inbox" ? "#f21353" : "#9c9c9c"}
+                />
+                <Text style={name == "inbox" ? styles.navSelectedIconText : styles.navIconText}>Inbox</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            style={styles.iconContainer}
+            onPress={() => router.replace("/Profile")}
+            >
+                <EvilIcons 
+                name="user" 
+                size={38} 
+                color={name == "profile" ? "#f21353" : "#9c9c9c"} 
+                />
+                <Text style={name == "profile" ? styles.navSelectedIconText : styles.navIconText}>Profile</Text>
+            </TouchableOpacity>
         </View>
     )
 }

@@ -66,12 +66,11 @@ const styles = StyleSheet.create({
     container : {
         backgroundColor : "white",
         gap : 18,
-        elevation: 15,
-        shadowColor: '#4d4c4c',
+        elevation : 1
     },
     searchBar : {
         flexDirection : "row",
-        paddingTop : 48,
+        paddingTop : 10,
         paddingHorizontal : 18,
         alignItems : "center",
         gap : 10
