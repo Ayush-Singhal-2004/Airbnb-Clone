@@ -76,29 +76,29 @@ let amazingViews = [
         images : "https://images.unsplash.com/photo-1681237444831-6275bd032c7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         name : "Pawna Lake, India",
         rate : "4.94",
-        distance : "",
+        distance : "254 kilometers away",
         price : "$289"
     },
     {
-        images : "https://images.unsplash.com/photo-1681237444831-6275bd032c7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name : "Pawna Lake, India",
+        images : "https://images.unsplash.com/photo-1675788384262-4c4a95cdfe48?q=80&w=1655&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Mulshi, India",
+        rate : "4.97",
+        distance : "322 kilometers away",
+        price : "$149"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1658057700268-8cb27660fedc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Karjat, India",
         rate : "4.94",
-        distance : "",
+        distance : "400 kilometers away",
         price : "$289"
     },
     {
-        images : "https://images.unsplash.com/photo-1681237444831-6275bd032c7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name : "Pawna Lake, India",
-        rate : "4.94",
-        distance : "",
-        price : "$289"
-    },
-    {
-        images : "https://images.unsplash.com/photo-1681237444831-6275bd032c7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name : "Pawna Lake, India",
-        rate : "4.94",
-        distance : "",
-        price : "$289"
+        images : "https://images.unsplash.com/photo-1700933401517-c254a149dfa5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Patan, India",
+        rate : "5",
+        distance : "186 kilometers away",
+        price : "$181"
     }
 ]   
 
