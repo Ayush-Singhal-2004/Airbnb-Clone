@@ -100,6 +100,48 @@ let amazingViews = [
         distance : "186 kilometers away",
         price : "$181"
     }
-]   
+]
 
-export {navOptions, surfing, amazingViews};
+let profilePageOptions = [
+    {
+        heading : "Settings",
+        options : [
+            { component : "FontAwesome5", icon : "user-circle", name : "Personal information" },
+            { component : "FontAwesome5", icon : "shield-alt", name : "Login & security" },
+            { component : "FontAwesome5", icon : "money-bill-alt", name : "Payments and payouts" },
+            { component : "MaterialIcons", icon : "settings", name : "Accessibility" },
+            { component : "FontAwesome5", icon : "newspaper", name : "Taxes" },
+            { component : "MaterialIcons", icon : "translate", name : "Translation" },
+            { component : "FontAwesome5", icon : "bell", name : "Notifications" },
+            { component : "MaterialIcons", icon : "lock-outline", name : "Privacy and sharing" },
+            { component : "FontAwesome5", icon : "suitcase", name : "Travel for work" }
+        ]
+    },
+    {
+        heading : "Hosting",
+        options : [
+            { component : "MaterialIcons", icon : "add-home", name : "List your space" },
+            { component : "MaterialIcons", icon : "add-home-work", name : "Learn about hosting" }
+        ]
+    },
+    {
+        heading : "Support",
+        options : [
+            { component : "FontAwesome5", icon : "question-circle", name : "Visit the Help Center" },
+            { component : "FontAwesome5", icon : "user-shield", name : "Get help with a safety issue" },
+            { component : "FontAwesome5", icon : "headphones-alt", name : "Report a neighborhood concern" },
+            { component : "FontAwesome5", icon : "airbnb", name : "How Airbnb works" },
+            { component : "FontAwesome5", icon : "pencil-alt", name : "Give us feedback" },
+        ]
+    },
+    {
+        heading : "Legal",
+        options : [
+            { component : "MaterialIcons", icon : "menu-book", name : "Terms of Services" },
+            { component : "MaterialIcons", icon : "menu-book", name : "Privacy Policy" },
+            { component : "MaterialIcons", icon : "menu-book", name : "Open source licenses" },
+        ]
+    }
+]
+
+export {navOptions, surfing, amazingViews, profilePageOptions};

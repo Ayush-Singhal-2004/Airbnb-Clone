@@ -1,8 +1,9 @@
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, Dimensions } from "react-native";
 import Surfing from "./Surfing";
 import AmazingViews from "./AmazingViews";
 import useExploreContent from "../Context/ExploreContext";
 
+const windowHeight = Dimensions.get('window').height;
 const navOptionContent = [<Surfing />, <AmazingViews />];
 
 export default function ExploreContent() {
@@ -20,6 +21,6 @@ export default function ExploreContent() {
 
 const styles = StyleSheet.create({
     container : {
-        height : 482
+        height : windowHeight * (68/100)
     }
 });

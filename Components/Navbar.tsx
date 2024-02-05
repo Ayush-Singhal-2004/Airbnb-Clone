@@ -7,7 +7,6 @@ import useExploreContent from '../Context/ExploreContext';
 export default function Navbar({changeOption}){
 
     const navRef = useRef([]);
-    const scrollRef = useRef();
     const [selected, setSelected] = useState(0);
     const content = useExploreContent();
 
@@ -18,7 +17,9 @@ export default function Navbar({changeOption}){
     const handleNavOption = (index:number, name:string) => {
         setSelected(index);
         content.value = index;
-        changeOption(name)
+        changeOption(name);
+
+        const selected = navRef.current[index];
     };
 
     return (
@@ -43,7 +44,6 @@ export default function Navbar({changeOption}){
             horizontal={true} 
             style={styles.navScrollContainer} 
             showsHorizontalScrollIndicator={false}
-            ref={scrollRef}
             >
             {
                 navOptions.map((item, index:number) => (
@@ -51,7 +51,7 @@ export default function Navbar({changeOption}){
                     key={index} 
                     style={styles.navScrollItemContainer} 
                     ref={(e) => {navRef.current[index] = e}}
-                    onPress={(event) => { handleNavOption(index, item.name) }}
+                    onPress={() => { handleNavOption(index, item.name) }}
                     >
                         <MaterialIcons 
                         name={item.icon as any} 
