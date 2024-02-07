@@ -58,7 +58,7 @@ let surfing = [
     {
         images : "https://images.unsplash.com/photo-1641531017443-49b1b1c74346?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         name : "Tambon kamala, Thailand",
-        rate : "",
+        rate : "3.8",
         distance : "3,007 kilometers away",
         price : "$4,084"
     }
@@ -100,6 +100,120 @@ let amazingViews = [
         distance : "186 kilometers away",
         price : "$181"
     }
+]
+
+let tinyHomes = [
+    {
+        images : "https://images.unsplash.com/photo-1569421473410-bb419b1b2c01?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Bogë, Rajoni i Pejës",
+        rate : "3.8",
+        distance : "1,032 kilometers away",
+        price : "$249"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1502745241548-8b38f964ed2b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Iceland",
+        rate : "4.5",
+        distance : "1,565 kilometers away",
+        price : "$299"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1626290131022-4e5a5e167173?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Topanga Canyon, Topanga, CA, USA",
+        rate : "4.5",
+        distance : "1,326 kilometers away",
+        price : "$289"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1595525101922-d7febbdd796d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "The Veluwe in The Netherlands",
+        rate : "4.5",
+        distance : "1,032 kilometers away",
+        price : "$249"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1532460089048-7b14bf14cb65?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Skanör-Falsterbo, Sweden",
+        rate : "5.0",
+        distance : "1,582 kilometers away",
+        price : "$499"
+    },
+]
+
+let amazingPools = [
+    {
+        images : "https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Horseshoe Bend, Page, United States",
+        rate : "5.0",
+        distance : "1,585 kilometers away",
+        price : "$249"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1508787129984-dd3c3c71034a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Tampa, United States",
+        rate : "5.0",
+        distance : "1,032 kilometers away",
+        price : "$499"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1605367605729-b3c74565571d?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "",
+        rate : "5.0",
+        distance : "856 kilometers away",
+        price : "$199"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1627616010739-78ee1aacf431?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "",
+        rate : "4.2",
+        distance : "1,032 kilometers away",
+        price : "$249"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1536745511564-a5fa6e596e7b?q=80&w=1396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "",
+        rate : "4.5",
+        distance : "1,032 kilometers away",
+        price : "$349"
+    },
+]
+
+let castles = [
+    {
+        images : "https://images.unsplash.com/photo-1571504211935-1c936b327411?q=80&w=1517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Edinburgh, UK",
+        rate : "4.2",
+        distance : "1,585 kilometers away",
+        price : "$399"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1609237756221-88c4a93846b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Neuschwanstein Castles, Schwangau, Schwangau, Germany",
+        rate : "5.0",
+        distance : "1,689 kilometers away",
+        price : "$999"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1597941265658-46a50fb4efc4?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Germany",
+        rate : "4.5",
+        distance : "1,231 kilometers away",
+        price : "$399"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1526816229784-65d5d54ac8bc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Château de Chambord, Chambord, France",
+        rate : "5.0",
+        distance : "1,654 kilometers away",
+        price : "$999"
+    },
+    {
+        images : "https://images.unsplash.com/photo-1456072212651-c507cb43b26f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name : "Igis, Switzerland",
+        rate : "4.2",
+        distance : "1,585 kilometers away",
+        price : "$499"
+    },
 ]
 
 let profilePageOptions = [
@@ -144,4 +258,4 @@ let profilePageOptions = [
     }
 ]
 
-export {navOptions, surfing, amazingViews, profilePageOptions};
+export {navOptions, surfing, amazingViews, tinyHomes, amazingPools, castles, profilePageOptions};

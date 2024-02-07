@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
     },
     heading : {
         fontSize : 16,
-        fontWeight : "bold"
+        fontWeight : "bold",
+        width : 250
     },
     rate : {
         flexDirection : "row",

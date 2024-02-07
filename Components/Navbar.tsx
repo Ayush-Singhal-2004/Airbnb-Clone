@@ -6,9 +6,9 @@ import useExploreContent from '../Context/ExploreContext';
 
 export default function Navbar({changeOption}){
 
-    const navRef = useRef([]);
-    const [selected, setSelected] = useState(0);
     const content = useExploreContent();
+    const navRef = useRef([]);
+    const [selected, setSelected] = useState(content.value as number);
 
     const handleSortIconPress = () => {
         console.log("sort icon clicked!!");
@@ -18,8 +18,6 @@ export default function Navbar({changeOption}){
         setSelected(index);
         content.value = index;
         changeOption(name);
-
-        const selected = navRef.current[index];
     };
 
     return (

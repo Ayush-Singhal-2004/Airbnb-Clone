@@ -1,6 +1,7 @@
 import { useContext, createContext } from "react"
 
 export const ExploreContentContext = createContext({
+    name : "Surfing",
     value : 0
 })
 
