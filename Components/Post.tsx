@@ -1,9 +1,16 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
+import useExploreContent from "../Context/ExploreContext";
 
 export default function Post({image, name, rate, distance, price}) {
         
+    const exploreContent = useExploreContent();
+
+    const handleLikePress = () => {
+        exploreContent.wishlists.push(image);
+    };
+
     return (
         <View style={styles.container}>
             <View style={styles.upperContainer}>
@@ -12,7 +19,9 @@ export default function Post({image, name, rate, distance, price}) {
                         source={image}
                         style={styles.image}
                     />
-                    <FontAwesome name="heart-o" size={24} color="white" style={styles.heartIcon}/>
+                    <TouchableOpacity style={styles.heartIcon} onPress={handleLikePress}>
+                        <FontAwesome name="heart-o" size={24} color="white" />
+                    </TouchableOpacity>
                 </View>
             </View>
             <View style={styles.lowerContainer}>

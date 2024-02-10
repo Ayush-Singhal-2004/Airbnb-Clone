@@ -2,11 +2,17 @@ import { View, Text, StyleSheet, TouchableOpacity, TextInput, Dimensions} from "
 import { Image } from "expo-image";
 import { AntDesign, Fontisto,FontAwesome5 } from '@expo/vector-icons';
 import { useState } from "react";
+import { router } from "expo-router";
+
 const screenWidth = Dimensions.get("window").width;
 
 export default function Login() {
 
-    const [phoneNumber, setPhoneNumber] = useState(null);
+    const [phoneNumber, setPhoneNumber] = useState(null);    
+
+    const gotoApp = () => {
+        router.replace("/Explore");
+    }
 
     return (
         <View style={styles.container}>
@@ -33,7 +39,7 @@ export default function Login() {
             <View 
             style={{paddingVertical : 25, borderBottomColor : "#ebebeb", borderBottomWidth : 1}}
             >
-                <TouchableOpacity style={styles.continueButton}>
+                <TouchableOpacity style={styles.continueButton} onPress={gotoApp}>
                     <Text style={{color : "white", fontSize : 18, fontWeight : "500"}}>Continue</Text>
                 </TouchableOpacity>
             </View>

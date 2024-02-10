@@ -7,7 +7,7 @@ export default function FootNavbar({name}) {
     return (
         <View style={styles.navContainer}>
             <TouchableOpacity 
-            onPress={() => router.replace("/")}
+            onPress={() => router.replace("/Explore")}
             >
                 <Feather 
                 name="search" 

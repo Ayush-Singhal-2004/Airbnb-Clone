@@ -32,5 +32,6 @@
         "expo-font"
       ]
     ]
-  }
+  },
+  "jsEngine": "v8"
 }
